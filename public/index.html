@@ -3,32 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Word Display</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f0f0f0;
-    }
-    #word {
-      font-size: 48px;
-      font-weight: bold;
-      color: #333;
-    }
-  </style>
+  <title>Coinflip Game</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="word">Waiting...</div>
+  <!-- Sign-up Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <h2>Sign Up</h2>
+      <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="20">
+      <button id="signupButton">Join Game</button>
+      <p id="signupError" class="error"></p>
+    </div>
+  </div>
+
+  <!-- Game Interface -->
+  <div id="gameContainer" class="hidden">
+    <h1>Coinflip Game</h1>
+    <p>Logged in as: <span id="currentUser"></span></p>
+    <div id="gameList">
+      <h2>Available Games</h2>
+      <ul id="games"></ul>
+      <button id="createGameButton">Create New Game</button>
+    </div>
+    <div id="gameArea" class="hidden">
+      <h2>Game ID: <span id="gameId"></span></h2>
+      <p>Players: <span id="players"></span></p>
+      <div id="choiceArea">
+        <p>Choose your side:</p>
+        <button id="headsButton">Heads</button>
+        <button id="tailsButton">Tails</button>
+      </div>
+      <div id="resultArea" class="hidden">
+        <div id="coin" class="coin"></div>
+        <p id="resultText"></p>
+      </div>
+    </div>
+  </div>
+
   <script src="/socket.io/socket.io.js"></script>
-  <script>
-    const socket = io();
-    socket.on('word', (word) => {
-      document.getElementById('word').textContent = word;
-    });
-  </script>
+  <script src="client.js"></script>
 </body>
 </html>
