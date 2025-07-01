@@ -1,0 +1,16 @@
+{
+  "name": "word-display",
+  "version": "1.0.0",
+  "description": "A web app that displays a synchronized word every 5 seconds",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.5.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
