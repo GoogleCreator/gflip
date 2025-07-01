@@ -1,16 +1,14 @@
 {
-  "name": "coinflip-game",
-  "version": "1.0.0",
-  "description": "A real-time coinflip game with sign-up modal",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "socket.io": "^4.5.0"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  }
+    "name": "gardenflip",
+    "version": "1.0.0",
+    "description": "GardenFlip coinflip game with Roblox verification",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "socket.io": "^4.7.5",
+        "axios": "^1.6.7"
+    }
 }
