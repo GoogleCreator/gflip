@@ -1,7 +1,7 @@
 {
-  "name": "word-display",
+  "name": "coinflip-game",
   "version": "1.0.0",
-  "description": "A web app that displays a synchronized word every 5 seconds",
+  "description": "A real-time coinflip game with sign-up modal",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
